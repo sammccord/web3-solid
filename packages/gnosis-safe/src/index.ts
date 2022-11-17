@@ -1,8 +1,8 @@
 import type { SafeAppProvider } from '@gnosis.pm/safe-apps-provider'
 import type SafeAppsSDK from '@gnosis.pm/safe-apps-sdk'
 import type { Opts } from '@gnosis.pm/safe-apps-sdk'
-import type { Actions } from '@web3-react/types'
-import { Connector } from '@web3-react/types'
+import type { Actions } from '@web3-solid/types'
+import { Connector } from '@web3-solid/types'
 
 export class NoSafeContext extends Error {
   public constructor() {
@@ -22,7 +22,7 @@ export interface GnosisSafeConstructorArgs {
 
 export class GnosisSafe extends Connector {
   /** {@inheritdoc Connector.provider} */
-  public provider?: SafeAppProvider
+  declare provider?: SafeAppProvider
 
   private readonly options?: Opts
   private eagerConnection?: Promise<void>
@@ -71,7 +71,7 @@ export class GnosisSafe extends Connector {
 
       if (safe) {
         const SafeAppProvider = await SafeAppProviderPromise
-        this.provider = new SafeAppProvider(safe, this.sdk)
+        this.provider = new SafeAppProvider(safe, this.sdk as any)
       }
     }))
   }

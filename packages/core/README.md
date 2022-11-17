@@ -1,1 +1,1 @@
-# @web3-react/core
+# @web3-solid/core

@@ -1,1 +1,1 @@
-# @web3-react/network
+# @web3-solid/network

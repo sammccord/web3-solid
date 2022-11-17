@@ -1,1 +1,1 @@
-# @web3-react/types
+# @web3-solid/types

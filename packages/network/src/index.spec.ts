@@ -1,5 +1,5 @@
-import { createWeb3ReactStoreAndActions } from '@web3-react/store'
-import type { Actions, Web3ReactStore } from '@web3-react/types'
+import { createWeb3SolidStoreAndActions } from '@web3-solid/store'
+import type { Actions, Web3SolidStore } from '@web3-solid/types'
 import { Network } from './'
 
 export class MockJsonRpcProvider {
@@ -19,14 +19,14 @@ const chainId = '0x1'
 const accounts: string[] = []
 
 describe('Network', () => {
-  let store: Web3ReactStore
+  let store: Web3SolidStore
   let connector: Network
   let mockConnector: MockJsonRpcProvider
 
   describe('single url', () => {
     beforeEach(() => {
       let actions: Actions
-      ;[store, actions] = createWeb3ReactStoreAndActions()
+      ;[store, actions] = createWeb3SolidStoreAndActions()
       connector = new Network({ actions, urlMap: { 1: 'https://mock.url' } })
     })
 
@@ -63,7 +63,7 @@ describe('Network', () => {
   describe('array of urls', () => {
     beforeEach(async () => {
       let actions: Actions
-      ;[store, actions] = createWeb3ReactStoreAndActions()
+      ;[store, actions] = createWeb3SolidStoreAndActions()
       connector = new Network({
         actions,
         urlMap: { 1: ['https://1.mock.url', 'https://2.mock.url'] },
@@ -92,7 +92,7 @@ describe('Network', () => {
   describe('multiple chains', () => {
     beforeEach(async () => {
       let actions: Actions
-      ;[store, actions] = createWeb3ReactStoreAndActions()
+      ;[store, actions] = createWeb3SolidStoreAndActions()
       connector = new Network({
         actions,
         urlMap: { 1: 'https://mainnet.mock.url', 2: 'https://testnet.mock.url' },

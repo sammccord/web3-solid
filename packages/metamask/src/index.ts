@@ -6,8 +6,8 @@ import type {
   ProviderConnectInfo,
   ProviderRpcError,
   WatchAssetParameters,
-} from '@web3-react/types'
-import { Connector } from '@web3-react/types'
+} from '@web3-solid/types'
+import { Connector } from '@web3-solid/types'
 
 type MetaMaskProvider = Provider & { isMetaMask?: boolean; isConnected?: () => boolean; providers?: MetaMaskProvider[] }
 
@@ -35,7 +35,7 @@ export interface MetaMaskConstructorArgs {
 
 export class MetaMask extends Connector {
   /** {@inheritdoc Connector.provider} */
-  public provider?: MetaMaskProvider
+  declare public provider?: MetaMaskProvider
 
   private readonly options?: Parameters<typeof detectEthereumProvider>[0]
   private eagerConnection?: Promise<void>

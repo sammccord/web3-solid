@@ -1,7 +1,7 @@
 import type { JsonRpcProvider } from '@ethersproject/providers'
 import type { ConnectionInfo } from '@ethersproject/web'
-import type { Actions } from '@web3-react/types'
-import { Connector } from '@web3-react/types'
+import type { Actions } from '@web3-solid/types'
+import { Connector } from '@web3-solid/types'
 import { getBestProvider } from './utils'
 
 type url = string | ConnectionInfo
@@ -25,9 +25,9 @@ export interface NetworkConstructorArgs {
 
 export class Network extends Connector {
   /** {@inheritdoc Connector.provider} */
-  public readonly provider: undefined
+  declare public readonly provider: undefined
   /** {@inheritdoc Connector.customProvider} */
-  public customProvider?: JsonRpcProvider
+  declare public customProvider?: JsonRpcProvider
 
   private readonly providerCache: Record<number, Promise<JsonRpcProvider> | undefined> = {}
 

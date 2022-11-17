@@ -1,7 +1,7 @@
 import type { JsonRpcProvider } from '@ethersproject/providers'
 import type { ConnectionInfo } from '@ethersproject/web'
-import type { Actions } from '@web3-react/types'
-import { Connector } from '@web3-react/types'
+import type { Actions } from '@web3-solid/types'
+import { Connector } from '@web3-solid/types'
 
 type url = string | ConnectionInfo
 
@@ -19,9 +19,9 @@ export interface UrlConstructorArgs {
 
 export class Url extends Connector {
   /** {@inheritdoc Connector.provider} */
-  public readonly provider: undefined
+  declare readonly provider: undefined
   /** {@inheritdoc Connector.customProvider} */
-  public customProvider?: JsonRpcProvider
+  declare public customProvider?: JsonRpcProvider
 
   private readonly url: url | JsonRpcProvider
 

@@ -1,1 +1,1 @@
-# @web3-react/gnosis-safe
+# @web3-solid/gnosis-safe

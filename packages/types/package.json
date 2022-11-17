@@ -1,11 +1,11 @@
 {
-  "name": "@web3-react/types",
+  "name": "@web3-solid/types",
   "keywords": [
-    "web3-react"
+    "web3-solid"
   ],
   "author": "Noah Zinsmeister <noahwz@gmail.com>",
   "license": "GPL-3.0-or-later",
-  "repository": "github:Uniswap/web3-react",
+  "repository": "github:Uniswap/web3-solid",
   "publishConfig": {
     "access": "public"
   },
@@ -13,16 +13,22 @@
   "files": [
     "dist/*"
   ],
-  "type": "commonjs",
+  "type": "module",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
-  "exports": "./dist/index.js",
+  "module": "./dist/index.js",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js"
+  },
   "scripts": {
     "prebuild": "rm -rf dist",
-    "build": "tsc",
-    "start": "tsc --watch"
+    "build": "tsc -b",
+    "dev": "tsc --watch"
   },
   "dependencies": {
+    "solid-js": "^1.6.2",
+    "solid-zustand": "^1.5.0",
     "zustand": "^4.0.0-rc.0"
   }
 }

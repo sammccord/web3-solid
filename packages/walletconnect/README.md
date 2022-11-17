@@ -1,1 +1,1 @@
-# @web3-react/walletconnect
+# @web3-solid/walletconnect

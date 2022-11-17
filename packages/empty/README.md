@@ -1,1 +1,1 @@
-# @web3-react/empty
+# @web3-solid/empty

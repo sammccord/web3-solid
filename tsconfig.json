@@ -1,9 +1,30 @@
 {
-  "extends": "@tsconfig/recommended/tsconfig.json",
+  "extends": "@tsconfig/node16/tsconfig.json",
   "compilerOptions": {
-    "module": "CommonJS",
+    "strict": true,
+    "composite": true,
+    "incremental": true,
     "declaration": true,
-    "moduleResolution": "Node"
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "lib": ["dom", "es6", "ESNext.Promise", "ESNext.String", "ESNext.Array"],
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "strictNullChecks": false,
+    "strictFunctionTypes": true,
+    "skipLibCheck": true,
+    "strictPropertyInitialization": false,
+    "preserveConstEnums": true,
+    "noImplicitThis": true,
+    "alwaysStrict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   },
   "exclude": ["**/*.spec.ts"]
 }

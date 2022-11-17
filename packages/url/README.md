@@ -1,1 +1,1 @@
-# @web3-react/url
+# @web3-solid/url

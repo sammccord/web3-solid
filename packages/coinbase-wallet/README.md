@@ -1,1 +1,1 @@
-# @web3-react/coinbase-wallet
+# @web3-solid/coinbase-wallet

@@ -2,7 +2,9 @@
   "extends": "../../tsconfig.json",
   "include": ["./src"],
   "compilerOptions": {
-    "jsx": "react",
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "rootDir": "src",
     "outDir": "./dist"
   }
 }

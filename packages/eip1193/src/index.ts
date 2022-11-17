@@ -1,5 +1,5 @@
-import type { Actions, Provider, ProviderConnectInfo, ProviderRpcError } from '@web3-react/types'
-import { Connector } from '@web3-react/types'
+import type { Actions, Provider, ProviderConnectInfo, ProviderRpcError } from '@web3-solid/types'
+import { Connector } from '@web3-solid/types'
 
 function parseChainId(chainId: string | number) {
   return typeof chainId === 'string' ? Number.parseInt(chainId, 16) : chainId
@@ -17,7 +17,7 @@ export interface EIP1193ConstructorArgs {
 
 export class EIP1193 extends Connector {
   /** {@inheritdoc Connector.provider} */
-  provider: Provider
+  declare provider: Provider
 
   constructor({ actions, provider, onError }: EIP1193ConstructorArgs) {
     super(actions, onError)

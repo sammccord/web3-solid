@@ -1,1 +1,1 @@
-# @web3-react/eip1193
+# @web3-solid/eip1193

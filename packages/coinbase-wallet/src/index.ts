@@ -5,8 +5,8 @@ import type {
   ProviderConnectInfo,
   ProviderRpcError,
   WatchAssetParameters,
-} from '@web3-react/types'
-import { Connector } from '@web3-react/types'
+} from '@web3-solid/types'
+import { Connector } from '@web3-solid/types'
 
 function parseChainId(chainId: string | number) {
   return typeof chainId === 'number' ? chainId : Number.parseInt(chainId, chainId.startsWith('0x') ? 16 : 10)
@@ -26,7 +26,7 @@ export interface CoinbaseWalletConstructorArgs {
 
 export class CoinbaseWallet extends Connector {
   /** {@inheritdoc Connector.provider} */
-  public provider: CoinbaseWalletProvider | undefined
+  declare provider: CoinbaseWalletProvider | undefined
 
   private readonly options: CoinbaseWalletSDKOptions
   private eagerConnection?: Promise<void>

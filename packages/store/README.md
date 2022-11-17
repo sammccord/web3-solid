@@ -1,1 +1,1 @@
-# @web3-react/store
+# @web3-solid/store

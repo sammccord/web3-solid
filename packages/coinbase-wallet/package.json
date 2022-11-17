@@ -1,12 +1,12 @@
 {
-  "name": "@web3-react/coinbase-wallet",
+  "name": "@web3-solid/coinbase-wallet",
   "keywords": [
-    "web3-react",
+    "web3-solid",
     "coinbase-wallet"
   ],
   "author": "Noah Zinsmeister <noahwz@gmail.com>",
   "license": "GPL-3.0-or-later",
-  "repository": "github:Uniswap/web3-react",
+  "repository": "github:Uniswap/web3-solid",
   "publishConfig": {
     "access": "public"
   },
@@ -14,22 +14,26 @@
   "files": [
     "dist/*"
   ],
-  "type": "commonjs",
+  "type": "module",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
-  "exports": "./dist/index.js",
+  "module": "./dist/index.js",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js"
+  },
   "scripts": {
     "prebuild": "rm -rf dist",
-    "build": "tsc",
-    "start": "tsc --watch"
+    "build": "tsc -b",
+    "dev": "tsc --watch"
   },
   "dependencies": {
-    "@web3-react/types": "^8.0.20-beta.0"
+    "@web3-solid/types": "^8.0.20-beta.0"
   },
   "peerDependencies": {
     "@coinbase/wallet-sdk": "^3.0.4"
   },
   "devDependencies": {
-    "@web3-react/store": "^8.0.25-beta.0"
+    "@web3-solid/store": "^8.0.25-beta.0"
   }
 }

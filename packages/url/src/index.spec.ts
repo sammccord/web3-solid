@@ -1,5 +1,5 @@
-import { createWeb3ReactStoreAndActions } from '@web3-react/store'
-import type { Actions, Web3ReactStore } from '@web3-react/types'
+import { createWeb3SolidStoreAndActions } from '@web3-solid/store'
+import type { Actions, Web3SolidStore } from '@web3-solid/types'
 import { Url } from '.'
 import { MockJsonRpcProvider } from '../../network/src/index.spec'
 
@@ -11,14 +11,14 @@ const chainId = '0x1'
 const accounts: string[] = []
 
 describe('Url', () => {
-  let store: Web3ReactStore
+  let store: Web3SolidStore
   let connector: Url
   let mockConnector: MockJsonRpcProvider
 
   describe('works', () => {
     beforeEach(() => {
       let actions: Actions
-      ;[store, actions] = createWeb3ReactStoreAndActions()
+      ;[store, actions] = createWeb3SolidStoreAndActions()
       connector = new Url({ actions, url: 'https://mock.url' })
     })
 
