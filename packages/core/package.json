@@ -24,7 +24,8 @@
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "tsc -b",
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "test": "vitest"
   },
   "dependencies": {
     "@web3-solid/store": "^8.0.25-beta.0",
@@ -36,5 +37,11 @@
   },
   "optionalDependencies": {
     "@ethersproject/providers": "^5"
+  },
+  "devDependencies": {
+    "@solidjs/testing-library": "^0.5.1",
+    "vite": "^3.2.4",
+    "vite-plugin-solid": "^2.4.0",
+    "vitest": "^0.25.2"
   }
 }
