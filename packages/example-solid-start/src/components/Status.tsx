@@ -12,9 +12,9 @@ export function Status(props: {
           🔴 {props.error.name ?? 'Error'}
           {props.error.message ? `: ${props.error.message}` : null}
         </>
-      ) : props.isActivating ? (
+      ) : props.isActivating() ? (
         <>🟡 Connecting</>
-      ) : props.isActive ? (
+      ) : props.isActive() ? (
         <>🟢 Connected</>
       ) : (
         <>⚪️ Disconnected</>

@@ -17,7 +17,7 @@ interface Props {
   setError: (error: Error | undefined) => void
   ENSNames: ReturnType<Web3SolidHooks['useENSNames']>
   provider?: ReturnType<Web3SolidHooks['useProvider']>
-  accounts?: string[]
+  accounts?: ReturnType<Web3SolidHooks['useAccounts']>
 }
 
 export function Card(props: Props) {

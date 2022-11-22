@@ -1,16 +1,15 @@
 import type { BigNumber } from '@ethersproject/bignumber'
 import { formatEther } from '@ethersproject/units'
 import type { Web3SolidHooks } from '@web3-solid/core'
-import { useEffect, useState } from 'react'
-import { For, Show } from 'solid-js'
+import { Accessor, createEffect, createSignal, For, Show } from 'solid-js'
 
 function useBalances(
   provider?: ReturnType<Web3SolidHooks['useProvider']>,
   accounts?: string[]
-): BigNumber[] | undefined {
-  const [balances, setBalances] = useState<BigNumber[] | undefined>()
+): Accessor<BigNumber[] | undefined> {
+  const [balances, setBalances] = createSignal<BigNumber[] | undefined>()
 
-  useEffect(() => {
+  createEffect(() => {
     if (provider && accounts?.length) {
       let stale = false
 
@@ -34,7 +33,7 @@ export function Accounts(props: {
   provider: ReturnType<Web3SolidHooks['useProvider']>
   ENSNames: ReturnType<Web3SolidHooks['useENSNames']>
 }) {
-  const balances = useBalances(props.provider, props.accounts)
+  const balances = useBalances(props.provider, props.accounts())
 
   if (props.accounts === undefined) return null
 
@@ -43,7 +42,7 @@ export function Accounts(props: {
       Accounts:{' '}
       <b>
         <Show when={props.accounts.length > 0}>
-          <For each={props.accounts}>
+          <For each={props.accounts()}>
             {(account, i) => (
               <ul style={{ margin: 0, overflow: 'hidden', "text-overflow": 'ellipsis' }}>
                 {props.ENSNames?.[i()] ?? account}

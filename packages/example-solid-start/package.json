@@ -17,6 +17,8 @@
     "@web3-solid/coinbase-wallet": "workspace:*",
     "@web3-solid/metamask": "workspace:*",
     "@web3-solid/walletconnect": "workspace:*",
+    "@web3-solid/gnosis-safe": "workspace:*",
+    "@web3-solid/network": "workspace:*",
     "@web3-solid/core": "workspace:*",
     "@web3-solid/types": "workspace:*",
     "solid-js": "^1.6.0",

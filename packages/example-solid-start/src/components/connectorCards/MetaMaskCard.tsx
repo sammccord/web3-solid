@@ -17,10 +17,8 @@ export default function MetaMaskCard() {
   const [error, setError] = createSignal(undefined)
 
   // attempt to connect eagerly on mount
-  createSignal(() => {
-    void metaMask.connectEagerly().catch(() => {
-      console.debug('Failed to connect eagerly to metamask')
-    })
+  void metaMask.connectEagerly().catch(() => {
+    console.debug('Failed to connect eagerly to metamask')
   })
 
   return (

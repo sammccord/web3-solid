@@ -1,6 +1,6 @@
 import { URI_AVAILABLE } from '@web3-solid/walletconnect'
 import { createEffect, createSignal } from 'solid-js'
-import { hooks, walletConnect } from '../../connectors/walletConnect'
+import { hooks, walletConnect } from '~/connectors/walletConnect'
 import { Card } from '../Card'
 
 const { useChainId, useAccounts, useIsActivating, useIsActive, useProvider, useENSNames } = hooks
