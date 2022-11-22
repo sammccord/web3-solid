@@ -35,13 +35,13 @@ export function Accounts(props: {
 }) {
   const balances = useBalances(props.provider, props.accounts())
 
-  if (props.accounts === undefined) return null
+  if (props.accounts() === undefined) return null
 
   return (
     <div>
       Accounts:{' '}
       <b>
-        <Show when={props.accounts.length > 0}>
+        <Show when={props.accounts().length > 0}>
           <For each={props.accounts()}>
             {(account, i) => (
               <ul style={{ margin: 0, overflow: 'hidden', "text-overflow": 'ellipsis' }}>
