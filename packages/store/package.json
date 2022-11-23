@@ -24,6 +24,7 @@
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "tsc -b",
+    "clean": "rm -rf .turbo dist tsconfig.tsbuildinfo",
     "dev": "tsc --watch"
   },
   "dependencies": {

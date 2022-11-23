@@ -3,6 +3,7 @@
   "scripts": {
     "dev": "solid-start dev",
     "build": "solid-start build",
+    "clean": "rm -rf .solid .turbo",
     "start": "solid-start start"
   },
   "type": "module",
