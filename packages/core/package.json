@@ -29,20 +29,20 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@web3-solid/store": "^8.0.25-beta.0",
-    "@web3-solid/types": "^8.0.20-beta.0",
-    "zustand": "^4.0.0-rc.0"
+    "@web3-solid/store": "workspace:^8.0.25-beta.0",
+    "@web3-solid/types": "workspace:^8.0.20-beta.0",
+    "zustand": "^4.1.4"
   },
   "peerDependencies": {
     "solid-js": "^1.6.2"
   },
   "optionalDependencies": {
-    "@ethersproject/providers": "^5"
+    "@ethersproject/providers": "^5.7.2"
   },
   "devDependencies": {
     "@solidjs/testing-library": "^0.5.1",
     "vite": "^3.2.4",
     "vite-plugin-solid": "^2.4.0",
-    "vitest": "^0.25.2"
+    "vitest": "^0.25.3"
   }
 }

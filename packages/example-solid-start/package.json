@@ -8,23 +8,23 @@
   },
   "type": "module",
   "devDependencies": {
-    "solid-start-node": "^0.2.0",
-    "typescript": "^4.8.4",
-    "vite": "^3.1.8"
+    "solid-start-node": "^0.2.5",
+    "typescript": "^4.9.3",
+    "vite": "^3.2.4"
   },
   "dependencies": {
-    "@solidjs/meta": "^0.28.0",
-    "@solidjs/router": "^0.5.0",
-    "@web3-solid/coinbase-wallet": "workspace:*",
-    "@web3-solid/metamask": "workspace:*",
-    "@web3-solid/walletconnect": "workspace:*",
-    "@web3-solid/gnosis-safe": "workspace:*",
-    "@web3-solid/network": "workspace:*",
-    "@web3-solid/core": "workspace:*",
-    "@web3-solid/types": "workspace:*",
-    "solid-js": "^1.6.0",
-    "solid-start": "^0.2.0",
-    "undici": "^5.11.0"
+    "@solidjs/meta": "^0.28.2",
+    "@solidjs/router": "^0.5.1",
+    "@web3-solid/coinbase-wallet": "workspace:8.0.34-beta.0",
+    "@web3-solid/core": "workspace:8.0.35-beta.0",
+    "@web3-solid/gnosis-safe": "workspace:8.0.6-beta.0",
+    "@web3-solid/metamask": "workspace:8.0.28-beta.0",
+    "@web3-solid/network": "workspace:8.0.27-beta.0",
+    "@web3-solid/types": "workspace:8.0.20-beta.0",
+    "@web3-solid/walletconnect": "workspace:8.0.35-beta.0",
+    "solid-js": "^1.6.2",
+    "solid-start": "^0.2.5",
+    "undici": "^5.12.0"
   },
   "engines": {
     "node": ">=16"

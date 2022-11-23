@@ -28,10 +28,10 @@
     "dev": "tsc --watch"
   },
   "dependencies": {
-    "@ethersproject/providers": "^5",
-    "@web3-solid/types": "^8.0.20-beta.0"
+    "@ethersproject/providers": "^5.7.2",
+    "@web3-solid/types": "workspace:^8.0.20-beta.0"
   },
   "devDependencies": {
-    "@web3-solid/store": "^8.0.25-beta.0"
+    "@web3-solid/store": "workspace:^8.0.25-beta.0"
   }
 }

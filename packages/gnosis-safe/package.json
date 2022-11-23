@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@gnosis.pm/safe-apps-provider": "^0.12.0",
-    "@gnosis.pm/safe-apps-sdk": "^7.6.0",
-    "@web3-solid/types": "^8.0.20-beta.0"
+    "@gnosis.pm/safe-apps-sdk": "^7.8.0",
+    "@web3-solid/types": "workspace:^8.0.20-beta.0"
   }
 }

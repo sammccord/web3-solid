@@ -30,6 +30,6 @@
   "dependencies": {
     "solid-js": "^1.6.2",
     "solid-zustand": "^1.5.0",
-    "zustand": "^4.0.0-rc.0"
+    "zustand": "^4.1.4"
   }
 }
