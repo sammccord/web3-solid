@@ -18,6 +18,7 @@
     "@coinbase/wallet-sdk": "^3.6.0",
     "@testing-library/react-hooks": "^8.0.1",
     "@tsconfig/recommended": "^1.0.1",
+    "@tsconfig/node16": "^1.0.1",
     "@types/jest": "^27.5.2",
     "@types/node": "^17.0.45",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
